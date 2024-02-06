@@ -5,6 +5,7 @@ import { HeaderMobileComponent } from './components/header-mobile/header-mobile.
 import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.component';
 import { HeaderDesktopComponent } from './components/header-desktop/header-desktop.component';
 import { HomeComponent } from './pages/home/home.component';
+import { RestaurantCardComponent } from './components/restaurant-card/restaurant-card.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderMobileComponent,
     FooterMobileComponent,
     HeaderDesktopComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantCardComponent
   ],
   exports: [
     MainPageComponent,

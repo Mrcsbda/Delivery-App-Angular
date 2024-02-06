@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Restaurant } from '../../interfaces/restaurant.interface';
 
 @Component({
   selector: 'home',
@@ -6,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  selectedOption:string = "ALL";
+  selectedOption: string = "ALL";
 
   carrouselImages = [
     {
@@ -57,6 +58,69 @@ export class HomeComponent {
       value: "CHICKEN",
       path: "../../../../assets/images/chicken.png"
     }
+  ]
+
+  restaurants: Restaurant[] = [
+    {
+      name: "Los Perritos",
+      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
+      rating: 5,
+      endTime: 1693015200000,
+      startTime: 1692972000000,
+      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
+      categories: ["FAST FOOD", "BURGUER"],
+      deliveryPrice: 5,
+      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
+    },
+    {
+      name: "The Barbecue Station",
+      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
+      rating: 3,
+      endTime: 1693015200000,
+      startTime: 1692972000000,
+      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
+      categories: ["FAST FOOD", "BURGUER"],
+      deliveryPrice: 5,
+      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
+    },
+    {
+      name: "Pizza Hut",
+      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
+      rating: 4,
+      endTime: 1693015200000,
+      startTime: 1692972000000,
+      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
+      categories: ["FAST FOOD", "BURGUER"],
+      deliveryPrice: 5,
+      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
+    },
+    {
+      name: "Cosechas",
+      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
+      rating: 1,
+      endTime: 1693015200000,
+      startTime: 1692972000000,
+      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
+      categories: ["FAST FOOD", "BURGUER"],
+      deliveryPrice: 5,
+      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
+    },
+    {
+      name: "Los Pollos Hermanos",
+      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
+      rating: 2,
+      endTime: 1693015200000,
+      startTime: 1692972000000,
+      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
+      categories: ["FAST FOOD", "BURGUER"],
+      deliveryPrice: 5,
+      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
+    },
   ]
 
   selectOption(option: string) {

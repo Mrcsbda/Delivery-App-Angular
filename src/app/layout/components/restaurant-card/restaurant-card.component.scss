@@ -1,0 +1,53 @@
+@import "../../../../assets/styles/variables.scss";
+
+.restaurant-card {
+    width: 100%;
+    gap: 0.8rem;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+
+    &__image {
+        width: 130px;
+        height: 130px;
+        border-radius: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 17%, 54% 100%, 0 100%, 0% 50%);
+    }
+
+    &__info {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        width: 100%;
+    }
+
+    &__name {
+        font-size: 15px;
+        color: $dark-color;
+        font-weight: 400;
+        margin-top: 1rem;
+    }
+
+    &__rating-container {
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+
+    &__rating {
+        width: 12px;
+
+        &--full {
+            filter: invert(85%) sepia(84%) saturate(895%) hue-rotate(327deg) brightness(104%) contrast(102%);
+        }
+
+        &--empty {
+            filter: invert(96%) sepia(0%) saturate(1257%) hue-rotate(167deg) brightness(90%) contrast(106%);
+        }
+    }
+
+
+
+
+}

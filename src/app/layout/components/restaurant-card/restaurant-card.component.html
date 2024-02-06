@@ -1,0 +1,23 @@
+<section class="restaurant-card">
+  <figure class="restaurant-card__image-container">
+    <img class="restaurant-card__image" [src]="restaurantInfo.image" alt="" />
+  </figure>
+  <div class="restaurant-card__info">
+    <h2 class="restaurant-card__name">{{ restaurantInfo.name }}</h2>
+    <div class="restaurant-card__rating-container">
+      <img
+        class="restaurant-card__rating"
+        src="../../../../assets/images/star-full.svg"
+        alt=""
+        *ngFor="let rating of [].constructor(5); let i = index"
+        [ngClass]="
+          i < restaurantInfo.rating
+            ? 'restaurant-card__rating--full'
+            : 'restaurant-card__rating--empty'
+        "
+      />
+    </div>
+    <p class="restaurant-card__work-time"></p>
+    <p class="restaurant-card__delivery-price"></p>
+  </div>
+</section>
