@@ -1,0 +1,60 @@
+@import "../../../../assets/styles/variables.scss";
+
+.home {
+    padding: 0rem 1.5rem;
+
+    &__carrousel {
+        gap: 0.5rem;
+        width: 100%;
+        display: flex;
+        overflow: auto;
+        margin-bottom: 0.8rem;
+        scrollbar-width: none;
+    }
+
+    &__image {
+        height: 80px;
+        min-width: 48.5%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 15px;
+        color: $dark-color;
+    }
+
+    &__filter-options {
+        gap: 0.5rem;
+        width: 100%;
+        display: flex;
+        overflow: auto;
+        padding: 1rem 0;
+        scrollbar-width: none;
+    }
+
+    &__filter-option {
+        gap: 0.2rem;
+        display: flex;
+        min-width: 31.6%;
+        border-radius: 5px;
+        align-items: center;
+        padding: 0.6rem 0.5rem;
+        justify-content: center;
+        background-color: $light-gray;
+
+        &--text {
+            font-size: 13px;
+            color: $font-buttons-category-color;
+        }
+
+        &--icon {
+            width: 1rem;
+        }
+
+        &--selectd {
+            background-color: $main-color;
+        }
+    }
+}

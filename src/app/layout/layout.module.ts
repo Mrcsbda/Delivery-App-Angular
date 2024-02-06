@@ -6,8 +6,6 @@ import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.
 import { HeaderDesktopComponent } from './components/header-desktop/header-desktop.component';
 import { HomeComponent } from './pages/home/home.component';
 
-
-
 @NgModule({
   declarations: [
     MainPageComponent,
@@ -17,7 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
     HomeComponent
   ],
   exports: [
-    MainPageComponent
+    MainPageComponent,
   ],
   imports: [
     CommonModule

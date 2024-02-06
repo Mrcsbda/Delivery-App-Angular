@@ -1,1 +1,27 @@
-<p>home works!</p>
+<main class="home">
+  <section class="home__carrousel">
+    <img
+      *ngFor="let image of carrouselImages"
+      [src]="image.path"
+      [alt]="image.name"
+      class="home__image"
+    />
+  </section>
+  <h1 class="home__title">Restaurants</h1>
+  <article class="home__filter-options">
+    <section
+      *ngFor="let option of filterOptions"
+      class="home__filter-option"
+      [ngClass]="{'home__filter-option--selectd': option.value == selectedOption}"
+      (click)="selectOption(option.value)"
+    >
+      <img
+        *ngIf="option?.path"
+        [src]="option.path"
+        alt="{{ option.name }} image"
+        class="home__filter-option--icon"
+      />
+      <p class="home__filter-option--text">{{ option.name }}</p>
+    </section>
+  </article>
+</main>
