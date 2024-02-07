@@ -1,0 +1,17 @@
+.footer-mobile {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.9rem 0;
+    background-color: white;
+
+    &__icon-container {
+        display: flex;
+    }
+
+    &__icon {
+        width: 2rem;
+    }
+}
