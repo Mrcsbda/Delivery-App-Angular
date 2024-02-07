@@ -6,6 +6,7 @@ import { FooterMobileComponent } from './components/footer-mobile/footer-mobile.
 import { HeaderDesktopComponent } from './components/header-desktop/header-desktop.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RestaurantCardComponent } from './components/restaurant-card/restaurant-card.component';
+import { RestaurantInfoComponent } from './pages/restaurant-info/restaurant-info.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RestaurantCardComponent } from './components/restaurant-card/restaurant
     FooterMobileComponent,
     HeaderDesktopComponent,
     HomeComponent,
-    RestaurantCardComponent
+    RestaurantCardComponent,
+    RestaurantInfoComponent
   ],
   exports: [
     MainPageComponent,

@@ -1,0 +1,58 @@
+<main class="restaurant">
+  <article class="restaurant__info-container">
+    <img
+      class="restaurant__arrow-prev-icon"
+      src="../../../../assets/images/arrow-prev.svg"
+      alt="arrow prev icon"
+    />
+    <figure class="restaurant__logo-container">
+      <img
+        class="restaurant__logo"
+        [src]="restaurantInfo.logo"
+        alt="restaurant logo"
+      />
+    </figure>
+    <section class="restaurant__container">
+      <figure class="restaurant__image-container">
+        <img
+          [src]="restaurantInfo.image"
+          alt="restaurant image"
+          class="restaurant__image"
+        />
+      </figure>
+      <div class="restaurant__info">
+        <h1 class="restaurant__name">{{ restaurantInfo.name }}</h1>
+        <p class="restaurant__description">{{ restaurantInfo.description }}</p>
+        <div class="restaurant__rating-and-work-time-container">
+          <div class="restaurant__rating-container">
+            <img
+              class="restaurant__rating"
+              src="../../../../assets/images/star-full.svg"
+              alt=""
+              *ngFor="let rating of [].constructor(5); let i = index"
+              [ngClass]="
+                i < restaurantInfo.rating
+                  ? 'restaurant__rating--full'
+                  : 'restaurant__rating--empty'
+              "
+            />
+          </div>
+          <p class="restaurant__work-time">
+            Work time {{ restaurantInfo.startTime | date : "HH:mm" }} -
+            {{ restaurantInfo.endTime | date : "HH:mm" }}
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+  <article class="restaurant__filter-dishes">
+    <section
+      *ngFor="let option of restaurantInfo.dishesCategories"
+      class="restaurant__filter-dish"
+      [ngClass]="{ 'restaurant__filter-dish--selected': option == selectedOption }"
+      (click)="selectOption(option)"
+    >
+      <p class="restaurant__filter-dish--text">{{ option }}</p>
+    </section>
+  </article>
+</main>

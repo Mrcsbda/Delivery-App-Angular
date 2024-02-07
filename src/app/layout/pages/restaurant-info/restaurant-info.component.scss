@@ -1,0 +1,136 @@
+@import "../../../../assets/styles/variables.scss";
+
+.restaurant {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__info-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__logo-container {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &__logo {
+        height: 5rem;
+    }
+
+    &__arrow-prev-icon {
+        top: 0.3rem;
+        left: 0.3rem;
+        width: 1.5rem;
+        position: absolute;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    &__image-container {
+        display: flex;
+    }
+
+    &__info {
+        overflow: auto;
+        max-height: 140px;
+    }
+
+    &__image {
+        width: 120px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 17%, 54% 100%, 0 100%, 0% 50%);
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: 400;
+        color: $dark-color;
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        font-size: 13px;
+        font-weight: 300;
+        text-align: justify;
+        margin-bottom: 12px;
+    }
+
+    &__rating-and-work-time-container {
+        gap: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__rating-container {
+        gap: 1px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating {
+        width: 12px;
+
+        &--full {
+            filter: invert(85%) sepia(84%) saturate(895%) hue-rotate(327deg) brightness(104%) contrast(102%);
+        }
+
+        &--empty {
+            filter: invert(96%) sepia(0%) saturate(1257%) hue-rotate(167deg) brightness(90%) contrast(106%);
+        }
+    }
+
+    &__work-time {
+        font-size: 12px;
+        font-weight: 300;
+        text-align: right;
+        color: $dark-color;
+    }
+
+    &__filter-dishes {
+        gap: 0.5rem;
+        width: 100%;
+        display: flex;
+        overflow: auto;
+        scrollbar-width: none;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__filter-dish {
+        gap: 0.3rem;
+        display: flex;
+        min-width: 31.6%;
+        border-radius: 5px;
+        align-items: center;
+        padding: 0.6rem 0.5rem;
+        justify-content: center;
+        background-color: $light-gray;
+
+        &--text {
+            font-size: 13px;
+            color: $font-buttons-category-color;
+            text-align: center;
+        }
+
+        &--selected {
+            background-color: $main-color;
+        }
+    }
+}
