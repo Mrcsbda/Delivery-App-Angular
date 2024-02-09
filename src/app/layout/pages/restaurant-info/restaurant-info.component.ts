@@ -21,6 +21,39 @@ export class RestaurantInfoComponent {
     dishesCategories: ["All", "Hamburguer", "Dogs", "Other"],
   }
 
+  dishesInfo = [
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog",
+      price: 13
+    },
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog 2",
+      price: 15
+    },
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog 3",
+      price: 16
+    },
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog",
+      price: 13
+    },
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog 2",
+      price: 15
+    },
+    {
+      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
+      name: "Hot Dog 3",
+      price: 16
+    },
+  ]
+
   selectOption(option: string) {
     this.selectedOption = option;
   }

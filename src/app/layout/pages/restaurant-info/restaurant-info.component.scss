@@ -8,12 +8,12 @@
     flex-direction: column;
 
     &__info-container {
-        position: relative;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        position: relative;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.8rem;
+        flex-direction: column;
     }
 
     &__logo-container {
@@ -33,9 +33,9 @@
     }
 
     &__container {
-        display: flex;
-        width: 100%;
         gap: 1rem;
+        width: 100%;
+        display: flex;
     }
 
     &__image-container {
@@ -44,15 +44,18 @@
 
     &__info {
         overflow: auto;
-        max-height: 140px;
+        height: 40vw;
+        max-height: 150px;
     }
 
     &__image {
-        width: 120px;
-        height: 140px;
+        width: 40vw;
+        height: 40vw;
+        max-width: 150px;
+        max-height: 150px;
         object-fit: cover;
         border-radius: 10px;
-        clip-path: polygon(0 0, 100% 0, 100% 17%, 54% 100%, 0 100%, 0% 50%);
+
     }
 
     &__name {
@@ -107,10 +110,9 @@
         width: 100%;
         display: flex;
         overflow: auto;
-        scrollbar-width: none;
         border-radius: 5px;
+        scrollbar-width: none;
         margin-bottom: 1.5rem;
-        margin-bottom: 1rem;
     }
 
     &__filter-dish {
@@ -125,12 +127,20 @@
 
         &--text {
             font-size: 13px;
-            color: $font-buttons-category-color;
             text-align: center;
+            color: $font-buttons-category-color;
         }
 
         &--selected {
             background-color: $main-color;
         }
+    }
+
+    &__dishes-container {
+        gap: 1.1rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+        justify-content: center;
     }
 }

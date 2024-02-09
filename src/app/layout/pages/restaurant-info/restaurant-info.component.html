@@ -55,4 +55,7 @@
       <p class="restaurant__filter-dish--text">{{ option }}</p>
     </section>
   </article>
+  <article class="restaurant__dishes-container">
+    <dish-info *ngFor="let dish of dishesInfo" [dish]="dish"></dish-info>
+  </article>
 </main>
