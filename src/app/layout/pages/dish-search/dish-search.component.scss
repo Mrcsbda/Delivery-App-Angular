@@ -1,0 +1,34 @@
+@import "../../../../assets/styles/variables.scss";
+
+.dish-search {
+    padding: 1.5rem 1rem;
+
+    &__search-container {
+        gap: 0.7rem;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        padding: 0.8rem 1.1rem;
+        background-color: $light-gray;
+    }
+
+    &__search-icon,
+    &__delete {
+        width: 1.2rem;
+        filter: invert(78%) sepia(3%) saturate(20%) hue-rotate(341deg) brightness(85%) contrast(94%);
+    }
+
+    &__search {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        color: $dark-color;
+        background-color: $light-gray;
+
+        &::placeholder {
+            color: $gray-color;
+        }
+    }
+}

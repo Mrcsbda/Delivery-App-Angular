@@ -12,6 +12,7 @@
     }
 
     &__icon {
-        width: 2rem;
+        width: 1.8rem;
+        filter: invert(26%) sepia(0%) saturate(0%) hue-rotate(120deg) brightness(99%) contrast(100%);
     }
 }
