@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Restaurant } from '../../interfaces/restaurant.interface';
+import { ScreenSizeService } from '../../../services/screen-size.service';
 
 @Component({
   selector: 'home',
@@ -122,6 +123,12 @@ export class HomeComponent {
       dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
     },
   ]
+
+  constructor(private screenSizeService: ScreenSizeService) { }
+
+  get isMobile() {
+    return this.screenSizeService.isMobileView;
+  }
 
   selectOption(option: string) {
     this.selectedOption = option;

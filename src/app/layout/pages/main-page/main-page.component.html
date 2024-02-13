@@ -1,4 +1,7 @@
-<!-- <home></home> -->
+<header-desktop *ngIf="!isMobile; else footerMobile"></header-desktop>
+<home></home>
 <!-- <restaurant-info></restaurant-info> -->
-<dish-search></dish-search>
-<footer-mobile></footer-mobile>
+<!-- <dish-search></dish-search> -->
+<ng-template #footerMobile>
+  <footer-mobile></footer-mobile>
+</ng-template>
