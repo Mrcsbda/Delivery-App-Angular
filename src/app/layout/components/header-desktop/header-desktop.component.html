@@ -1,3 +1,42 @@
 <header class="header-desktop">
+  <section class="header-desktop__logo-and-address-container">
+    <figure class="header-desktop__logo-container">
+      <img
+        src="../../../../assets/images/logo.svg"
+        alt=""
+        class="header-desktop__logo"
+      />
+    </figure>
     <address-header></address-header>
-  </header>
+  </section>
+  <section class="header-desktop__nav-container">
+    <nav class="header-desktop__nav">
+      <ul
+        *ngIf="!userLogged; else optionsUserLogged"
+        class="header-desktop__nav-options"
+      >
+        <li
+          *ngFor="let option of headerOptions"
+          class="header-desktop__nav-option"
+        >
+          {{ option.title }}
+        </li>
+      </ul>
+      <ng-template #optionsUserLogged>
+        <ul class="header-desktop__nav-options">
+          <li
+            *ngFor="let option of headerOptionsUserLogged"
+            class="header-desktop__nav-option"
+          >
+            {{ option.title }}
+          </li>
+        </ul>
+      </ng-template>
+    </nav>
+    <hr>
+    <article>
+      <button>Login</button>
+      <button>Sign Up</button>
+    </article>
+  </section>
+</header>
