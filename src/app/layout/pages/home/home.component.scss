@@ -10,7 +10,8 @@
         display: flex;
         overflow: auto;
         margin-bottom: 0.8rem;
-        scrollbar-width: none;
+        scrollbar-width: 1px;
+        scrollbar-color: transparent transparent;
         border-radius: 10px;
     }
 
@@ -33,7 +34,8 @@
         width: 100%;
         display: flex;
         overflow: auto;
-        scrollbar-width: none;
+        scrollbar-width: 1px;
+        scrollbar-color: transparent transparent;
         border-radius: 5px;
         margin-bottom: 1.5rem;
     }
@@ -64,9 +66,28 @@
     }
 
     &__restaurants {
+        gap: 1.3rem;
         display: flex;
         flex-direction: column;
-        gap: 1.3rem;
     }
+}
 
+@media screen and (min-width: 500px) {
+    .home {
+        &__image {
+            min-width: 32%;
+        }
+
+        &__filter-option {
+            min-width: 23.5%;
+        }
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .home {
+        &__filter-option {
+            min-width: 18.8%;
+        }
+    }
 }

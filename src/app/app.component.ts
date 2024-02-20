@@ -1,5 +1,4 @@
-import { Component, HostListener } from '@angular/core';
-import { ScreenSizeService } from './services/screen-size.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,4 @@ import { ScreenSizeService } from './services/screen-size.service';
 })
 export class AppComponent {
   title = 'Delivery-App';
-  constructor(private screenSizeService: ScreenSizeService) {}
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.screenSizeService.updateisMobileView(event);
-  }
 }

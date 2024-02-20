@@ -18,7 +18,7 @@ export class RestaurantInfoComponent {
     description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
     categories: ["FAST FOOD", "BURGUER"],
     deliveryPrice: 5,
-    dishesCategories: ["All", "Hamburguer", "Dogs", "Other"],
+    dishesCategories: ["ALL", "HAMBURGUER", "DOGS", "OTHER"],
   }
 
   dishesInfo = [

@@ -9,6 +9,7 @@ import { RestaurantCardComponent } from './components/restaurant-card/restaurant
 import { RestaurantInfoComponent } from './pages/restaurant-info/restaurant-info.component';
 import { DishInfoComponent } from './components/dish-info/dish-info.component';
 import { DishSearchComponent } from './pages/dish-search/dish-search.component';
+import { AddressHeaderComponent } from './components/address-header/address-header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DishSearchComponent } from './pages/dish-search/dish-search.component';
     RestaurantCardComponent,
     RestaurantInfoComponent,
     DishInfoComponent,
-    DishSearchComponent
+    DishSearchComponent,
+    AddressHeaderComponent
   ],
   exports: [
     MainPageComponent,
