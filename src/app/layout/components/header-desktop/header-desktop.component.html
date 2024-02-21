@@ -33,10 +33,22 @@
         </ul>
       </ng-template>
     </nav>
-    <hr>
-    <article>
-      <button>Login</button>
-      <button>Sign Up</button>
+    <hr />
+    <article
+      *ngIf="!userLogged; else shoppingCart"
+      class="header-desktop__login-options"
+    >
+      <button class="header-desktop__login-button">Login</button>
+      <button class="header-desktop__signup-button">Sign Up</button>
     </article>
+    <ng-template #shoppingCart>
+      <figure class="header-desktop__shopping-cart-container">
+        <img
+          src="../../../../assets/images/cart.svg"
+          alt="shopping cart icon"
+          class="header-desktop__shopping-cart"
+        />
+      </figure>
+    </ng-template>
   </section>
 </header>

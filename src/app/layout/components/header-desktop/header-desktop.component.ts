@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './header-desktop.component.scss'
 })
 export class HeaderDesktopComponent {
-  userLogged: Boolean = false;
+  userLogged: Boolean = true;
   headerOptions = [
     {
       title: 'Home',

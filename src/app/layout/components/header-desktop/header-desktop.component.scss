@@ -1,10 +1,11 @@
 @import "../../../../assets/styles/variables.scss";
 
 .header-desktop {
-    padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
 
     &__logo-and-address-container {
         display: flex;
@@ -21,7 +22,55 @@
 
     &__nav-container {
         display: flex;
-        gap: 0.4rem;
+        gap: 0.6rem;
         align-items: center;
+    }
+
+    &__nav-options {
+        gap: 0.5rem;
+        display: flex;
+        color: $dark-color;
+    }
+
+    &__nav-option {
+        font-size: 15px;
+        list-style: none;
+    }
+
+    hr {
+        height: 30px;
+        border: 1px solid $gray-color;
+        border-left: none;
+    }
+
+    &__login-options {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__login-button, &__signup-button {
+        border-radius: 5px;
+        color: $dark-color;
+        padding: 0.3rem 1rem;
+    }
+
+    &__login-button {
+        background-color: white;
+        border: 1px solid $dark-color;
+    }
+
+    &__signup-button {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+    }
+
+    &__shopping-cart-container {
+        display: flex;
+    }
+
+    &__shopping-cart {
+        width: 1.7rem;
+        filter: invert(20%) sepia(0%) saturate(1108%) hue-rotate(271deg) brightness(96%) contrast(79%);
     }
 }
