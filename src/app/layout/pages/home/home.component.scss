@@ -8,10 +8,10 @@
         width: 100%;
         display: flex;
         overflow: auto;
-        margin-bottom: 0.8rem;
-        scrollbar-width: 1px;
-        scrollbar-color: transparent transparent;
         border-radius: 10px;
+        scrollbar-width: 1px;
+        margin-bottom: 0.8rem;
+        scrollbar-color: transparent transparent;
     }
 
     &__image {
@@ -32,9 +32,9 @@
         gap: 0.5rem;
         width: 100%;
         display: flex;
-        overflow: scroll;
+        overflow: auto;
         border-radius: 5px;
-        scrollbar-width: 1px;
+        scrollbar-width: 0;
         margin-bottom: 1.5rem;
         scrollbar-color: transparent transparent;
     }
@@ -42,6 +42,7 @@
     &__filter-option {
         gap: 0.3rem;
         display: flex;
+        cursor: pointer;
         min-width: 31.65%;
         border-radius: 5px;
         align-items: center;
@@ -93,6 +94,8 @@
 
 @media screen and (min-width: 650px) {
     .home {
+        padding-bottom: 2-5rem;
+
         &__image {
             min-width: 24%;
         }
@@ -108,6 +111,7 @@
         &__restaurants {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
         }
     }
 }
@@ -143,6 +147,7 @@
         &__carrousel {
             gap: 1rem;
         }
+
         &__image {
             height: 150px;
         }
@@ -150,5 +155,40 @@
         &__filter-option {
             min-width: 170px;
         }
+
+        &__restaurants {
+            grid-template-columns: repeat(3, 370px);
+        }
     }
+}
+
+@media screen and (min-width: 1500px) {
+    .home {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__filter-option {
+            gap: 0.5rem;
+
+            &--text {
+                font-size: 15px;
+            }
+
+            &--icon {
+                width: 1.2rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1620px) {
+    .home {
+        &__restaurants {
+            grid-template-columns: repeat(4, 370px);
+            justify-content: center;
+        }
+    }
+
 }
