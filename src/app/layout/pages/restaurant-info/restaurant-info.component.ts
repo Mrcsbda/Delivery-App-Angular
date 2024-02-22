@@ -7,7 +7,7 @@ import { Restaurant } from '../../interfaces/restaurant.interface';
   styleUrl: './restaurant-info.component.scss'
 })
 export class RestaurantInfoComponent {
-  selectedOption: string = "All";
+  selectedOption: string = "ALL";
   restaurantInfo: Restaurant = {
     name: "Los Perritos",
     logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",

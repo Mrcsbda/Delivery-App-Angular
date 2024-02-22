@@ -157,7 +157,11 @@
         }
 
         &__restaurants {
-            grid-template-columns: repeat(3, 370px);
+            grid-template-columns: repeat(3, 380px);
+        }
+
+        &__filter-option {
+            min-width: 160px;
         }
     }
 }
@@ -172,21 +176,26 @@
             gap: 0.5rem;
 
             &--text {
-                font-size: 15px;
+                font-size: 16px;
             }
 
             &--icon {
                 width: 1.2rem;
             }
         }
+
+        &__restaurants {
+            grid-template-columns: repeat(3, 400px);
+            justify-content: center;
+        }
     }
 
 }
 
-@media screen and (min-width: 1620px) {
+@media screen and (min-width: 1700px) {
     .home {
         &__restaurants {
-            grid-template-columns: repeat(4, 370px);
+            grid-template-columns: repeat(4, 400px);
             justify-content: center;
         }
     }

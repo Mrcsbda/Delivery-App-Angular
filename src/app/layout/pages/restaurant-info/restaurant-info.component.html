@@ -52,7 +52,7 @@
       [ngClass]="{ 'restaurant__filter-dish--selected': option == selectedOption }"
       (click)="selectOption(option)"
     >
-      <p class="restaurant__filter-dish--text">{{ option }}</p>
+      <p class="restaurant__filter-dish--text">{{ option | titlecase }}</p>
     </section>
   </article>
   <article class="restaurant__dishes-container">
