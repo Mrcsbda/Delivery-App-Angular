@@ -1,7 +1,6 @@
 @import "../../../../assets/styles/variables.scss";
 
 .home {
-    background-color: #fcfcfc;
     padding: 0rem 1.5rem 5.5rem 1.5rem;
 
     &__carrousel {
@@ -33,17 +32,17 @@
         gap: 0.5rem;
         width: 100%;
         display: flex;
-        overflow: auto;
-        scrollbar-width: 1px;
-        scrollbar-color: transparent transparent;
+        overflow: scroll;
         border-radius: 5px;
+        scrollbar-width: 1px;
         margin-bottom: 1.5rem;
+        scrollbar-color: transparent transparent;
     }
 
     &__filter-option {
         gap: 0.3rem;
         display: flex;
-        min-width: 31.6%;
+        min-width: 31.65%;
         border-radius: 5px;
         align-items: center;
         padding: 0.6rem 0.5rem;
@@ -88,6 +87,68 @@
     .home {
         &__filter-option {
             min-width: 18.8%;
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .home {
+        &__image {
+            min-width: 24%;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .home {
+        &__filter-option {
+            min-width: 15.62%;
+        }
+
+        &__restaurants {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .home {
+        &__carrousel {
+            justify-content: center;
+            gap: 0.8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1016px) {
+    .home {
+        &__image {
+            height: 100px;
+        }
+
+        &__filter-options {
+            justify-content: center;
+            gap: 0.9rem;
+        }
+
+        &__filter-option {
+            min-width: 150px;
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .home {
+        &__carrousel {
+            gap: 1rem;
+        }
+        &__image {
+            height: 150px;
+        }
+
+        &__filter-option {
+            min-width: 170px;
         }
     }
 }
