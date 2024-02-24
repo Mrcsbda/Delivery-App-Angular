@@ -9,16 +9,16 @@
     background-color: white;
     border: 1px solid rgb(240, 240, 240);
 
-    &:hover .restaurant-card__image {
+    &:hover &__image {
         opacity: 0.9;
-        transform: scale(1.2);
-        transition: .5s all ease;
+        transform: scale(1.1);
+        transition: .3s all ease;
     }
 
     &__image-container {
-        min-width: 130px;
         height: 130px;
         display: flex;
+        min-width: 130px;
         overflow: hidden;
         border-radius: 10px;
         clip-path: polygon(0 0, 100% 0, 100% 17%, 54% 100%, 0 100%, 0% 50%);

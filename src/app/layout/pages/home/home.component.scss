@@ -138,6 +138,9 @@
 
         &__filter-option {
             min-width: 150px;
+            &:hover {
+                background-color: $main-color;
+            }
         }
     }
 }

@@ -158,6 +158,11 @@
     .restaurant {
         padding: 0 1.4rem 1.4rem;
 
+        &__info-container {
+            max-width: 700px;
+            align-self: center;
+        }
+
         &__logo {
             height: 7rem;
         }
@@ -188,7 +193,6 @@
             font-size: 15px;
             margin-bottom: 13px;
         }
-
 
         &__rating {
             width: 14px;
@@ -221,6 +225,87 @@
 
         &__filter-dish {
             min-width: 150px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .restaurant {
+        &__logo {
+            height: 8rem;
+        }
+
+        &__arrow-prev-icon {
+            display: none;
+        }
+
+        &__container {
+            gap: 1.9rem;
+        }
+
+        &__info {
+            max-height: 180px;
+        }
+
+        &__image {
+            max-width: 180px;
+            max-height: 180px;
+        }
+
+        &__description {
+            margin-bottom: 15px;
+        }
+
+        &__filter-dish {
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+
+        &__dishes-container {
+            gap: 1, 4rem;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .restaurant {
+
+        &__info-container {
+            max-width: 800px;
+        }
+
+        &__info {
+            max-height: 190px;
+        }
+
+        &__image {
+            max-width: 190px;
+        }
+
+        &__name {
+            font-size: 19px;
+        }
+
+        &__description {
+            font-size: 17px;
+        }
+
+        &__rating {
+            width: 15px;
+        }
+
+        &__work-time {
+            font-size: 15px;
+        }
+
+        &__filter-dish {
+
+            &--text {
+                font-size: 15px;
+            }
         }
     }
 }
