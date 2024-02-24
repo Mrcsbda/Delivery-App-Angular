@@ -10,6 +10,7 @@ import { RestaurantInfoComponent } from './pages/restaurant-info/restaurant-info
 import { DishInfoComponent } from './components/dish-info/dish-info.component';
 import { DishSearchComponent } from './pages/dish-search/dish-search.component';
 import { AddressHeaderComponent } from './components/address-header/address-header.component';
+import { SearchResultInfoComponent } from './components/search-result-info/search-result-info.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddressHeaderComponent } from './components/address-header/address-head
     RestaurantInfoComponent,
     DishInfoComponent,
     DishSearchComponent,
-    AddressHeaderComponent
+    AddressHeaderComponent,
+    SearchResultInfoComponent
   ],
   exports: [
     MainPageComponent,

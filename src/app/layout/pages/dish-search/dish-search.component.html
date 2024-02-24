@@ -4,4 +4,7 @@
     <input class="dish-search__search" type="text" placeholder="Search for a dish"/>
     <img class="dish-search__delete" src="../../../../assets/images/delete.svg" alt="" />
   </section>
+  <section class="dish-search__results-container">
+    <search-result-info *ngFor="let dish of dishesInfo" [dish]="dish"></search-result-info>
+  </section>
 </main>
