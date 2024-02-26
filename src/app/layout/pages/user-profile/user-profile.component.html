@@ -1,0 +1,19 @@
+<main class="user-profile">
+  <figure class="user-profile__picture-container">
+    <img
+      class="user-profile__picture"
+      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="profile picture"
+    />
+    <figcaption class="user-profile__user-name">Mariana Castañeda</figcaption>
+  </figure>
+  <section class="user-profile__options-container">
+    <article *ngFor="let option of configOptions" class="user-profile__option">
+      <div class="user-profile__option-info">
+        <img class="user-profile__option-icon" [src]="option.icon" alt="{{ option.title }} icon" />
+        <p class="user-profile__option-title">{{ option.title }}</p>
+      </div>
+      <img class="user-profile__arrow-icon" src="../../../../assets/images/arrow-next.svg" alt="">
+    </article>
+  </section>
+</main>

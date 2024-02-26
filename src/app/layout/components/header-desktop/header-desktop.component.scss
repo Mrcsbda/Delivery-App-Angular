@@ -8,9 +8,9 @@
     justify-content: space-between;
 
     &__logo-and-address-container {
+        gap: 0.4rem;
         display: flex;
         align-items: center;
-        gap: 0.4rem;
     }
 
     &__logo-container {
@@ -38,6 +38,10 @@
         cursor: pointer;
         font-weight: 300;
         list-style: none;
+
+        &:hover {
+            color: $gray-color;
+        }
     }
 
     hr {
@@ -47,29 +51,39 @@
     }
 
     &__login-options {
-        display: flex;
         gap: 0.5rem;
+        display: flex;
         align-items: center;
     }
 
     &__login-button,
     &__signup-button {
-        border-radius: 5px;
-        color: $dark-color;
-        padding: 0.3rem 1rem;
         font-size: 15px;
         cursor: pointer;
         font-weight: 300;
+        color: $dark-color;
+        border-radius: 5px;
+        padding: 0.3rem 1rem;
     }
 
     &__login-button {
         background-color: white;
         border: 1px solid $dark-color;
+
+        &:hover {
+            border-color: $main-color;
+            background-color: $main-color;
+        }
     }
 
     &__signup-button {
         background-color: $main-color;
         border: 1px solid $main-color;
+
+        &:hover {
+            background-color: white;
+            border-color: $dark-color;
+        }
     }
 
     &__shopping-cart-container {
@@ -80,24 +94,6 @@
         width: 1.7rem;
         cursor: pointer;
         filter: invert(20%) sepia(0%) saturate(1108%) hue-rotate(271deg) brightness(96%) contrast(79%);
-    }
-}
-
-@media screen and (min-width: 1100px) {
-    .header-desktop {
-        &__login-button {
-            &:hover {
-                background-color: $main-color;
-                border-color: $main-color;
-            }
-        }
-
-        &__signup-button {
-            &:hover {
-                background-color: white;
-                border-color: $dark-color;
-            }
-        }
     }
 }
 
