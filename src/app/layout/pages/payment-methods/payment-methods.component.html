@@ -1,0 +1,21 @@
+<main class="payment-methods">
+  <section class="payment-methods__container">
+    <h1 class="payment-methods__title">Payment methods</h1>
+    <article class="payment-methods__cards-container">
+      <div class="payment-methods__card" *ngFor="let card of cards">
+        <figure class="payment-methods__card-image-container">
+          <img
+            class="payment-methods__card-image"
+            src="../../../../assets/images/{{ card.type }}.svg"
+            alt="{{ card.type }} icon"
+          />
+          <figcaption class="payment-methods__card-number">
+            **** **** **** {{ card.number }}
+          </figcaption>
+        </figure>
+        <img class="payment-methods__delete-icon" src="../../../../assets/images/delete.svg" alt="delete icon" />
+      </div>
+    </article>
+  </section>
+  <button class="payment-methods__add-card-button">Add new card</button>
+</main>

@@ -13,6 +13,7 @@ import { AddressHeaderComponent } from './components/address-header/address-head
 import { SearchResultInfoComponent } from './components/search-result-info/search-result-info.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { PaymentMethodsComponent } from './pages/payment-methods/payment-methods.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     RestaurantInfoComponent,
     SearchResultInfoComponent,
     UserProfileComponent,
+    PaymentMethodsComponent,
   ],
   exports: [
     MainPageComponent,
