@@ -11,20 +11,22 @@ import { DishInfoComponent } from './components/dish-info/dish-info.component';
 import { DishSearchComponent } from './pages/dish-search/dish-search.component';
 import { AddressHeaderComponent } from './components/address-header/address-header.component';
 import { SearchResultInfoComponent } from './components/search-result-info/search-result-info.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 @NgModule({
   declarations: [
-    MainPageComponent,
-    HeaderMobileComponent,
-    FooterMobileComponent,
-    HeaderDesktopComponent,
-    HomeComponent,
-    RestaurantCardComponent,
-    RestaurantInfoComponent,
+    AddressHeaderComponent,
     DishInfoComponent,
     DishSearchComponent,
-    AddressHeaderComponent,
-    SearchResultInfoComponent
+    FooterMobileComponent,
+    HeaderDesktopComponent,
+    HeaderMobileComponent,
+    HomeComponent,
+    MainPageComponent,
+    OrdersComponent,
+    RestaurantCardComponent,
+    RestaurantInfoComponent,
+    SearchResultInfoComponent,
   ],
   exports: [
     MainPageComponent,

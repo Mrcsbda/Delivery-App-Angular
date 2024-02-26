@@ -1,0 +1,33 @@
+<main class="orders">
+  <h1 class="orders__title">All orders</h1>
+  <section class="orders__orders-container">
+    <article *ngFor="let order of orders" class="orders__order">
+      <div class="orders__order-info">
+        <figure class="orders__order-image-container">
+          <img
+            [src]="order.image"
+            alt="{{ order.restaurant }}"
+            class="orders__order-image"
+          />
+        </figure>
+        <div class="orders__order-info-container">
+          <p class="orders__restaurant-name">{{ order.restaurant }}</p>
+          <span class="orders__order-total">$ {{ order.total }}</span>
+        </div>
+      </div>
+      <div class="orders__order-status-container">
+        <p
+          class="orders__order-status"
+          [ngClass]="{
+            'orders__order-status--pending': order.status == 'PENDING',
+            'orders__order-status--delivered': order.status == 'DELIVERED',
+            'orders__order-status--cancelled': order.status == 'CANCELLED'
+          }"
+        >
+          {{ order.status | titlecase }}
+        </p>
+        <img class="orders__arrow-icon" src="../../../../assets/images/arrow-next.svg" alt="arrow icon" />
+      </div>
+    </article>
+  </section>
+</main>
