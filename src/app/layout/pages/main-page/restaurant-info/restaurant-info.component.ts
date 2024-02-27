@@ -57,4 +57,8 @@ export class RestaurantInfoComponent {
   selectOption(option: string) {
     this.selectedOption = option;
   }
+
+  goBack = () => {
+    window.history.back()
+  }
 }

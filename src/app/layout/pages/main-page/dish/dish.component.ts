@@ -12,4 +12,8 @@ export class DishComponent {
     adittions: ["French fries", "Coca Cola 750ml"],
     description: "Our Quesudo Hot Dog is made with warm bread, baked Zenú sausage, melted cheese, our rich and fresh salad and potato chips."
   }
+
+  goBack = () => {
+    window.history.back()
+  }
 }

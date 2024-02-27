@@ -1,21 +1,52 @@
 <main class="dish">
-    <section class="dish__container">
-        <article class="dish__info-container">
-            <img  class="dish__arrow-prev-icon" src="../../../../../assets/images/arrow-prev.svg" alt="arrow icon">
-            <figure class="dish__image-container">
-                <img class="dish__image" [src]="dish.image" alt="">
-            </figure>
-            <div class="dish__info">
-                <div class="dish__title-container">
-                    <h1 class="dish__title">{{dish.name}}</h1>
-                    <p class="dish__time"></p>
-                </div>
-                <p></p>
-            </div>
-        </article>
-        <article>
-            <h2></h2>
-        </article>
-    </section>
-    <section></section>
+  <section class="dish__container">
+    <article class="dish__info-container">
+      <img
+        class="dish__arrow-prev-icon"
+        src="../../../../../assets/images/arrow-prev.svg"
+        alt="arrow icon"
+        (click)="goBack()"
+      />
+      <figure class="dish__image-container">
+        <img class="dish__image" [src]="dish.image" alt="" />
+      </figure>
+      <div class="dish__info">
+        <div class="dish__title-container">
+          <h1 class="dish__title">{{ dish.name }}</h1>
+          <figure class="dish__time-container">
+            <img
+              class="dish__time-icon"
+              src="../../../../../assets/images/clock.svg"
+              alt=""
+            />
+            <figcaption class="dish__time">15-20 min</figcaption>
+          </figure>
+        </div>
+        <p class="dish__description">{{ dish.description }}</p>
+      </div>
+    </article>
+    <article class="dish__additional-info">
+      <h2 class="dish__additional-info-title">Additional ingredients</h2>
+      <div class="dish__additional-info-container">
+        <div *ngFor="let adittion of dish.adittions" class="dish__addition">
+          <div class="dish__addition-container">
+            <input type="checkbox" />
+            <p class="dish__addition-text">{{ adittion }}</p>
+          </div>
+          <p class="dish__addition-price">+2$</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="dish__order-buttons-container">
+    <article class="dish__order-buttons">
+        <button class="dish__minus-button">-</button>
+        <p class="dish__quantity">0</p>
+        <button class="dish__plus-button">+</button>
+    </article>
+    <button class="dish__add-to-cart-button">
+        <p class="dish__add-to-cart-text">Add to cart</p>
+        <p class="dish__add-to-cart-total">$0</p>
+    </button>
+  </section>
 </main>
