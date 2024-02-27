@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Restaurant } from '../../interfaces/restaurant.interface';
+import { Restaurant } from '../../../interfaces/restaurant.interface';
 
 @Component({
   selector: 'restaurant-info',

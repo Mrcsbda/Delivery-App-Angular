@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Restaurant } from '../../interfaces/restaurant.interface';
-import { ScreenSizeService } from '../../../services/screen-size.service';
+import { Component } from '@angular/core';
+import { ScreenSizeService } from '../../../../services/screen-size.service';
+import { Restaurant } from '../../../interfaces/restaurant.interface';
 
 @Component({
   selector: 'home',
