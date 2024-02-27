@@ -9,19 +9,23 @@ export class FooterMobileComponent {
   footerIcons = [
     {
       name: 'Home',
-      path: '../../../assets/images/home.svg'
+      icon: '../../../assets/images/home.svg',
+      path: "/"
     },
     {
       name: 'Search',
-      path: '../../../assets/images/search.svg'
+      icon: '../../../assets/images/search.svg',
+      path: "/search"
     },
     {
       name: 'Orders',
-      path: '../../../assets/images/orders.svg'
+      icon: '../../../assets/images/orders.svg',
+      path: "/orders"
     },
     {
       name: 'Profile',
-      path: '../../../assets/images/profile.svg'
+      icon: '../../../assets/images/profile.svg',
+      path: "/profile"
     }
   ]
 }

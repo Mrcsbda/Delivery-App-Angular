@@ -1,5 +1,15 @@
 <footer class="footer-mobile">
-    <figure *ngFor="let icon of footerIcons" class="footer-mobile__icon-container">
-        <img class="footer-mobile__icon" [src]="icon.path" alt="{{ icon.name }} icon">
-    </figure>
+  <figure
+    *ngFor="let icon of footerIcons"
+    class="footer-mobile__icon-container"
+    [routerLink]="icon.path"
+    routerLinkActive="footer-mobile__icon-container--active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <img
+      class="footer-mobile__icon"
+      [src]="icon.icon"
+      alt="{{ icon.name }} icon"
+    />
+  </figure>
 </footer>
