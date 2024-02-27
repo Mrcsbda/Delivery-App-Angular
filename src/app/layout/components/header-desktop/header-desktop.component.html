@@ -18,6 +18,7 @@
         <li
           *ngFor="let option of headerOptions"
           class="header-desktop__nav-option"
+          [routerLink]="option.path"
         >
           {{ option.title }}
         </li>
@@ -27,6 +28,7 @@
           <li
             *ngFor="let option of headerOptionsUserLogged"
             class="header-desktop__nav-option"
+            [routerLink]="option.path"
           >
             {{ option.title }}
           </li>
@@ -38,8 +40,12 @@
       *ngIf="!userLogged; else shoppingCart"
       class="header-desktop__login-options"
     >
-      <button class="header-desktop__login-button">Login</button>
-      <button class="header-desktop__signup-button">Sign Up</button>
+      <button class="header-desktop__login-button" routerLink="/login">
+        Login
+      </button>
+      <button class="header-desktop__signup-button" routerLink="/sign-up">
+        Sign Up
+      </button>
     </article>
     <ng-template #shoppingCart>
       <figure class="header-desktop__shopping-cart-container">

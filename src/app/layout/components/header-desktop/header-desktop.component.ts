@@ -6,34 +6,34 @@ import { Component } from '@angular/core';
   styleUrl: './header-desktop.component.scss'
 })
 export class HeaderDesktopComponent {
-  userLogged: Boolean = false;
+  userLogged: Boolean = true;
   headerOptions = [
     {
       title: 'Home',
-      path: '/'
+      path: ''
     },
     {
       title: 'Search',
-      path: '/'
+      path: 'search'
     }
   ]
 
   headerOptionsUserLogged = [
     {
       title: 'Home',
-      path: '/'
+      path: ''
     },
     {
       title: 'Search',
-      path: '/'
+      path: 'search'
     },
     {
       title: 'Orders',
-      path: '/'
+      path: 'orders'
     },
     {
       title: 'Profile',
-      path: '/'
+      path: 'profile'
     }
   ]
 }

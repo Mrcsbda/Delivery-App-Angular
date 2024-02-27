@@ -8,7 +8,7 @@
     <figcaption class="user-profile__user-name">Mariana Castañeda</figcaption>
   </figure>
   <section class="user-profile__options-container">
-    <article *ngFor="let option of configOptions" class="user-profile__option">
+    <article *ngFor="let option of configOptions" class="user-profile__option" [routerLink]="option?.path">
       <div class="user-profile__option-info">
         <img class="user-profile__option-icon" [src]="option.icon" alt="{{ option.title }} icon" />
         <p class="user-profile__option-title">{{ option.title }}</p>

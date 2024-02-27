@@ -14,6 +14,8 @@ import { SearchResultInfoComponent } from './components/search-result-info/searc
 import { OrdersComponent } from './pages/orders/orders.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { PaymentMethodsComponent } from './pages/payment-methods/payment-methods.component';
+import { LayoutRoutingModule } from './layout-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PaymentMethodsComponent } from './pages/payment-methods/payment-methods
     MainPageComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LayoutRoutingModule,
+    RouterModule
   ]
 })
 export class LayoutModule { }

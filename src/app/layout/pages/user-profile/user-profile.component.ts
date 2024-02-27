@@ -14,6 +14,7 @@ export class UserProfileComponent {
     {
       icon: "../../../../assets/images/payment-methods.svg",
       title: "Payment methods",
+      path: "/payment-methods"
     },
     {
       icon: "../../../../assets/images/location-edit.svg",
