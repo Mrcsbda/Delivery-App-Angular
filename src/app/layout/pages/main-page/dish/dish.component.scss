@@ -105,7 +105,8 @@
         align-items: center;
     }
 
-    &__addition-text ,&__addition-price {
+    &__addition-text,
+    &__addition-price {
         font-size: 15px;
         font-weight: 300;
         color: $dark-color;
@@ -118,7 +119,7 @@
         bottom: 70px;
         display: flex;
         position: absolute;
-        padding:  0 1.5rem;
+        padding: 0 1.5rem;
         justify-content: center;
     }
 
@@ -132,7 +133,8 @@
         justify-content: space-between;
     }
 
-    &__minus-button, &__plus-button {
+    &__minus-button,
+    &__plus-button {
         border: none;
         cursor: pointer;
         font-size: 16px;
@@ -159,7 +161,8 @@
         justify-content: space-between;
     }
 
-    &__add-to-cart-text, &__add-to-cart-total {
+    &__add-to-cart-text,
+    &__add-to-cart-total {
         border: none;
         font-size: 15px;
         font-weight: 300;
@@ -192,4 +195,152 @@ input[type="checkbox"] {
     cursor: pointer;
     display: grid;
     place-content: center;
+}
+
+@media screen and (min-width: 651px) {
+    .dish {
+        align-items: center;
+
+        &__info-container {
+            gap: 0.5rem;
+            padding: 1.5rem;
+            width: max-content;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__arrow-prev-icon {
+            display: none;
+        }
+
+        &__image-container {
+            height: 220px;
+            max-width: 220px;
+            margin-bottom: 0;
+        }
+
+        &__image {
+            border-radius: 10px;
+        }
+
+        &__info {
+            overflow: auto;
+            padding: 1.4rem;
+            max-width: 350px;
+            position: relative;
+
+            &::before {
+                content: "";
+                left: 22px;
+                width: 70%;
+                height: 1px;
+                opacity: 0.5;
+                bottom: 7px;
+                position: absolute;
+                background-color: $dark-color;
+            }
+        }
+
+        &__title-container {
+            width: 95%;
+
+        }
+
+        &__description {
+            line-height: 19px;
+            margin-bottom: 0;
+        }
+
+        &__additional-info {
+            padding: 0 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__additional-info-title {
+            margin-bottom: 0.9rem;
+        }
+
+        &__additional-info-container {
+            gap: 0.7rem;
+        }
+
+        &__order-buttons-container {
+            position: static;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .dish {
+
+        &__image-container {
+            height: 240px;
+            max-width: 240px;
+        }
+
+        &__info {
+            max-width: 450px;
+        }
+
+        &__title {
+            font-size: 22px;
+            ;
+        }
+
+        &__time-container {
+            gap: 0.3rem;
+        }
+
+        &__time-icon {
+            width: 1.2rem;
+        }
+
+        &__time {
+            font-size: 15px;
+        }
+
+        &__description {
+            font-size: 17px;
+            line-height: 21px;
+        }
+
+        &__additional-info {
+            margin-bottom: 3.5rem;
+        }
+
+        &__additional-info-title {
+            font-size: 18px;
+        }
+
+        &__addition-text,
+        &__addition-price {
+            font-size: 17px;
+
+        }
+
+        &__order-buttons {
+            max-width: 130px;
+        }
+
+        &__minus-button,
+        &__plus-button {
+            font-size: 18px;
+        }
+
+        &__quantity {
+            font-size: 18px;
+        }
+
+        &__add-to-cart-button {
+            max-width: 190px;
+        }
+
+        &__add-to-cart-text,
+        &__add-to-cart-total {
+            font-size: 17px;
+        }
+
+
+    }
 }
