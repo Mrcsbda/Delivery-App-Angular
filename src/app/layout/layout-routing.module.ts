@@ -9,6 +9,7 @@ import { PaymentMethodsComponent } from './pages/main-page/payment-methods/payme
 import { RestaurantInfoComponent } from './pages/main-page/restaurant-info/restaurant-info.component';
 import { DishInfoComponent } from './components/dish-info/dish-info.component';
 import { DishComponent } from './pages/main-page/dish/dish.component';
+import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
 
 
 const routes: Routes = [
@@ -37,12 +38,16 @@ const routes: Routes = [
         component: PaymentMethodsComponent
       },
       {
-        path: ':restaurantId',
+        path: 'restaurant/:restaurantId',
         component: RestaurantInfoComponent
       },
       {
-        path: ':restaurantId/:dishId',
+        path: 'restaurant/:restaurantId/:dishId',
         component: DishComponent
+      },
+      {
+        path: 'orders/:orderId',
+        component: OrderStatusComponent
       }
     ]
   }

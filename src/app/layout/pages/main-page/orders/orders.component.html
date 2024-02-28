@@ -1,7 +1,7 @@
 <main class="orders">
   <h1 class="orders__title">All orders</h1>
   <section class="orders__orders-container">
-    <article *ngFor="let order of orders" class="orders__order">
+    <article *ngFor="let order of orders" class="orders__order" routerLink="/orders/1">
       <div class="orders__order-info">
         <figure class="orders__order-image-container">
           <img

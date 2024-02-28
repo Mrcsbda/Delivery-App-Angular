@@ -17,6 +17,8 @@ import { RestaurantInfoComponent } from './pages/main-page/restaurant-info/resta
 import { UserProfileComponent } from './pages/main-page/user-profile/user-profile.component';
 import { PaymentMethodsComponent } from './pages/main-page/payment-methods/payment-methods.component';
 import { DishComponent } from './pages/main-page/dish/dish.component';
+import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
+import { FinishedOrderComponent } from './components/finished-order/finished-order.component';
 
 
 
@@ -38,6 +40,8 @@ import { DishComponent } from './pages/main-page/dish/dish.component';
     UserProfileComponent,
     PaymentMethodsComponent,
     DishComponent,
+    OrderStatusComponent,
+    FinishedOrderComponent,
   ],
   exports: [
     MainPageComponent,

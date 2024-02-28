@@ -1,0 +1,30 @@
+<main class="finished-order">
+  <img
+    class="finished-order__arrow-prev-icon"
+    src="../../../../assets/images/arrow-prev.svg"
+    alt="arrow prev icon"
+  />
+  <h2 class="finished-order__date">16.11.2022</h2>
+  <section class="finished-order__info-container">
+    <article *ngFor="let i of [].constructor(3)" class="finished-order__info-item">
+      <div class="finished-order__info">
+        <p class="finished-order__quantity">1x</p>
+        <p class="finished-order__order">Meat Pizza(Medium)</p>
+      </div>
+      <p class="finished-order__price">$35.50</p>
+    </article>
+  </section>
+  <section class="finished-order__production-cost-container">
+    <p class="finished-order__production-cost">Production cost</p>
+    <span class="finished-order__production-cost-price">$15.00</span>
+  </section>
+  <section class="finished-order__cost-of-delivery-container">
+    <p class="finished-order__cost-of-delivery">Cost of delivery</p>
+    <span class="finished-order__cost-of-delivery-price">$5.00</span>
+  </section>
+  <hr class="finished-order__hr" />
+  <section class="finished-order__total-container">
+    <p class="finished-order__total">Total</p>
+    <span class="finished-order__total-price">$40.50</span>
+  </section>
+</main>
