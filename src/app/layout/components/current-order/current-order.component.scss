@@ -3,6 +3,7 @@
 .current-order {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.7rem;
     padding: 1.2rem;
     position: relative;
@@ -24,6 +25,8 @@
 
     &__order-status-container {
         align-items: center;
+        width: 100%;
+        max-width: 550px;
         background-color: #ffe0311f;
         border-radius: 10px;
         display: flex;
@@ -45,6 +48,8 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     &__order-statuses-container {
@@ -91,8 +96,11 @@
         display: flex;
         flex-direction: column;
         gap: 1.1rem;
+        max-width: 545px;
         overflow: auto;
         padding: 0.4rem 0;
+        width: 100%;
+
     }
 
     &__info-order {
@@ -146,11 +154,14 @@
     }
 
     &__final-info-container {
+        color: $dark-color;
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
         margin-bottom: 3.5rem;
-        color: $dark-color;
+        max-width: 550px;
+        width: 100%;
+
         hr {
             border: 1px solid $gray-color;
             border-bottom: none;
@@ -179,12 +190,103 @@
 
     &__cancel-button {
         background-color: $main-color;
-        border: none;
         border-radius: 10px;
+        border: none;
         color: $dark-color;
-        font-size: 15px;
         cursor: pointer;
+        font-size: 15px;
         padding: 0.7rem;
     }
 
+}
+
+@media screen and (min-width: 651px) {
+    .current-order {
+        padding: 0 1.2rem;
+
+        &__arrow {
+            display: none;
+        }
+
+        &__final-info-container {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .current-order {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__order-status-container {
+            max-width: 600px;
+        }
+
+        &__order-status-image {
+            width: 140px;
+        }
+
+        &__order-statuses {
+           padding: 0 1rem;
+        }
+
+
+        &__order-status-check {
+            height: 16.7px;
+            width: 16.7px;
+            padding: 0.3rem;
+            justify-content: center;
+            align-items: center;
+
+            &--icon {
+                height: 12px;
+                width: 12px;
+            }
+        }
+
+        &__order-status {
+            font-size: 16px;
+        }
+
+        &__info-container {
+            max-width: 585px;
+        }
+
+        &__info-image-container {
+            height: 70px;
+            min-width: 70px;
+        }
+
+        &__info-product-name {
+            font-size: 16px;
+            max-width: 370px;
+        }
+
+        &__info-quantity {
+            font-size: 16px;
+        }
+
+        &__info-price {
+            font-size: 16px;
+        }
+
+        &__final-info-container {
+            max-width: 590px;
+        }
+
+        &__total-products-title,
+        &__total-products-price,
+        &__delivery-title,
+        &__delivery-price,
+        &__total-to-pay-title {
+            font-size: 17px;
+        }
+
+        &__cancel-button {
+            font-size: 17px;
+        }
+
+    }
 }
