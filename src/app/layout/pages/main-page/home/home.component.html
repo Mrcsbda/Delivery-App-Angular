@@ -19,14 +19,14 @@
       <img
         *ngIf="option?.path"
         [src]="option.path"
-        alt="{{ option.name }} image"
+        alt="{{ option.value }} image"
         class="home__filter-option--icon"
       />
-      <p class="home__filter-option--text">{{ option.name }}</p>
+      <p class="home__filter-option--text">{{ option.value | titlecase }}</p>
     </section>
   </article>
   <article class="home__restaurants">
     <restaurant-card
-    *ngFor="let restaurant of restaurants" [restaurantInfo]="restaurant" ></restaurant-card>
+    *ngFor="let restaurant of filteredRestaurants" [restaurantInfo]="restaurant" ></restaurant-card>
   </article>
 </main>

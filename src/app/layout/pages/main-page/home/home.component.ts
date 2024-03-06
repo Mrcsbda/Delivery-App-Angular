@@ -34,37 +34,32 @@ export class HomeComponent implements OnInit {
 
   filterOptions = [
     {
-      name: "All",
       value: "ALL",
     },
     {
-      name: "Fast Food",
       value: "FAST FOOD",
       path: "../../../../assets/images/fast-food.png"
     },
     {
-      name: "Healthy",
       value: "HEALTHY",
       path: "../../../../assets/images/healthy.png"
     },
     {
-      name: "Burguer",
       value: "BURGUER",
       path: "../../../../assets/images/burguer.png"
     },
     {
-      name: "Pizza",
       value: "PIZZA",
       path: "../../../../assets/images/pizza.png"
     },
     {
-      name: "Chicken",
       value: "CHICKEN",
       path: "../../../../assets/images/chicken.png"
     }
   ]
 
   restaurants: Restaurant[] = []
+  filteredRestaurants: Restaurant[] = []
 
   constructor(
     private screenSizeService: ScreenSizeService,
@@ -75,17 +70,27 @@ export class HomeComponent implements OnInit {
     this.getRestaurants()
   }
 
+  private getRestaurants() {
+    this.RestaurantsService.getRestaurants()
+      .pipe(take(1))
+      .subscribe(restaurants => {
+        this.restaurants = restaurants
+        this.filteredRestaurants = restaurants
+      });
+  }
+
   get isMobile() {
     return this.screenSizeService.isMobileView;
   }
 
   selectOption(option: string) {
     this.selectedOption = option;
+    if (option == "ALL") {
+      this.filteredRestaurants = this.restaurants;
+    } else {
+      this.filteredRestaurants = this.restaurants.filter(restaurant => restaurant.categories.includes(option));
+    }
   }
 
-  private getRestaurants() {
-    this.RestaurantsService.getRestaurants()
-      .pipe(take(1))
-      .subscribe(restaurants => this.restaurants = restaurants);
-  }
+
 }
