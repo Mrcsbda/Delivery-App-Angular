@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Restaurant } from './../../../../models/restaurant';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ScreenSizeService } from '../../../../services/screen-size.service';
-import { Restaurant } from '../../../interfaces/restaurant.interface';
+import { RestaurantsService } from '../../../../services/restaurants.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
   selectedOption: string = "ALL";
 
   carrouselImages = [
@@ -61,70 +64,16 @@ export class HomeComponent {
     }
   ]
 
-  restaurants: Restaurant[] = [
-    {
-      name: "Los Perritos",
-      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
-      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
-      rating: 5,
-      endTime: 1693015200000,
-      startTime: 1692972000000,
-      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
-      categories: ["FAST FOOD", "BURGUER"],
-      deliveryPrice: 5,
-      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
-    },
-    {
-      name: "The Barbecue Station",
-      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
-      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
-      rating: 3,
-      endTime: 1693015200000,
-      startTime: 1692972000000,
-      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
-      categories: ["FAST FOOD", "BURGUER"],
-      deliveryPrice: 5,
-      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
-    },
-    {
-      name: "Pizza Hut",
-      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
-      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
-      rating: 4,
-      endTime: 1693015200000,
-      startTime: 1692972000000,
-      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
-      categories: ["FAST FOOD", "BURGUER"],
-      deliveryPrice: 5,
-      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
-    },
-    {
-      name: "Cosechas",
-      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
-      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
-      rating: 1,
-      endTime: 1693015200000,
-      startTime: 1692972000000,
-      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
-      categories: ["FAST FOOD", "BURGUER"],
-      deliveryPrice: 5,
-      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
-    },
-    {
-      name: "Los Pollos Hermanos",
-      logo: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692817923/deliveryApp/los-perritos.png",
-      image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692933249/deliveryApp/los%20perritos/losPerritos_sttg69.webp",
-      rating: 2,
-      endTime: 1693015200000,
-      startTime: 1692972000000,
-      description: "Los perritos son una franquicia local de comidas rápidas. Tienen como su nombre lo indica, perros calientes, pero también ofrecen hamburguesas doble carne o sencillas. Son una buena opción de comida callejera",
-      categories: ["FAST FOOD", "BURGUER"],
-      deliveryPrice: 5,
-      dishesCategories: ["HAMBURGER", "DOGS", "OTHER"],
-    },
-  ]
+  restaurants: Restaurant[] = []
 
-  constructor(private screenSizeService: ScreenSizeService) { }
+  constructor(
+    private screenSizeService: ScreenSizeService,
+    private RestaurantsService: RestaurantsService
+  ) { }
+
+  ngOnInit(): void {
+    this.getRestaurants()
+  }
 
   get isMobile() {
     return this.screenSizeService.isMobileView;
@@ -132,5 +81,11 @@ export class HomeComponent {
 
   selectOption(option: string) {
     this.selectedOption = option;
+  }
+
+  private getRestaurants() {
+    this.RestaurantsService.getRestaurants()
+      .pipe(take(1))
+      .subscribe(restaurants => this.restaurants = restaurants);
   }
 }

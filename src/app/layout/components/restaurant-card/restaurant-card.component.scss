@@ -19,6 +19,7 @@
         height: 130px;
         display: flex;
         min-width: 130px;
+        max-width: 130px;
         overflow: hidden;
         border-radius: 10px;
         clip-path: polygon(0 0, 100% 0, 100% 17%, 54% 100%, 0 100%, 0% 50%);
@@ -87,6 +88,7 @@
 
         &__image-container {
             min-width: 145px;
+            max-width: 145px;
             min-height: 155px;
         }
 

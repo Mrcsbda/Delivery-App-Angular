@@ -7,9 +7,9 @@ import { OrdersComponent } from './pages/main-page/orders/orders.component';
 import { UserProfileComponent } from './pages/main-page/user-profile/user-profile.component';
 import { PaymentMethodsComponent } from './pages/main-page/payment-methods/payment-methods.component';
 import { RestaurantInfoComponent } from './pages/main-page/restaurant-info/restaurant-info.component';
-import { DishInfoComponent } from './components/dish-info/dish-info.component';
 import { DishComponent } from './pages/main-page/dish/dish.component';
 import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
+import { CartComponent } from './pages/main-page/cart/cart.component';
 
 
 const routes: Routes = [
@@ -32,6 +32,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: UserProfileComponent
+      },
+      {
+        path: 'cart',
+        component: CartComponent
       },
       {
         path: "payment-methods",

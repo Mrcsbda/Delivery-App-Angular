@@ -20,6 +20,7 @@ import { DishComponent } from './pages/main-page/dish/dish.component';
 import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
 import { FinishedOrderComponent } from './components/finished-order/finished-order.component';
 import { CurrentOrderComponent } from './components/current-order/current-order.component';
+import { CartComponent } from './pages/main-page/cart/cart.component';
 
 
 
@@ -44,6 +45,7 @@ import { CurrentOrderComponent } from './components/current-order/current-order.
     OrderStatusComponent,
     FinishedOrderComponent,
     CurrentOrderComponent,
+    CartComponent,
   ],
   exports: [
     MainPageComponent,
