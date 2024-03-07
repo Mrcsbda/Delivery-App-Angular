@@ -22,9 +22,6 @@ import { FinishedOrderComponent } from './components/finished-order/finished-ord
 import { CurrentOrderComponent } from './components/current-order/current-order.component';
 import { CartComponent } from './pages/main-page/cart/cart.component';
 
-
-
-
 @NgModule({
   declarations: [
     AddressHeaderComponent,

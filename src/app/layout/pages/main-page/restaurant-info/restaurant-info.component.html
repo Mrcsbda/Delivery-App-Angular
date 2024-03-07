@@ -1,4 +1,4 @@
-<main class="restaurant">
+<main class="restaurant" *ngIf="restaurantInfo">
   <article class="restaurant__info-container">
     <img
       class="restaurant__arrow-prev-icon"
@@ -48,9 +48,20 @@
   </article>
   <article class="restaurant__filter-dishes">
     <section
+      class="restaurant__filter-dish"
+      [ngClass]="{
+        'restaurant__filter-dish--selected': selectedOption === 'ALL'
+      }"
+      (click)="selectOption('ALL')"
+    >
+      <p class="restaurant__filter-dish--text">All</p>
+    </section>
+    <section
       *ngFor="let option of restaurantInfo.dishesCategories"
       class="restaurant__filter-dish"
-      [ngClass]="{ 'restaurant__filter-dish--selected': option == selectedOption }"
+      [ngClass]="{
+        'restaurant__filter-dish--selected': option == selectedOption
+      }"
       (click)="selectOption(option)"
     >
       <p class="restaurant__filter-dish--text">{{ option | titlecase }}</p>

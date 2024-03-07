@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Restaurant } from '../models/restaurant';
-import { CollectionReference, Firestore, collectionData, orderBy, query } from '@angular/fire/firestore';
+import { CollectionReference, Firestore, collectionData, doc, docData, orderBy, query } from '@angular/fire/firestore';
 import { collection } from '@firebase/firestore';
 
 @Injectable({
@@ -26,5 +26,10 @@ export class RestaurantsService {
     return collectionData(q).pipe(
       map((restaurants) => restaurants as Restaurant[])
     )
+  }
+
+  getRestaurantById(key: string): Observable<Restaurant>{
+    const ref = doc(this.restaurantsCollectionREF, key);
+    return docData(ref).pipe(map((data) => data as Restaurant));
   }
 }

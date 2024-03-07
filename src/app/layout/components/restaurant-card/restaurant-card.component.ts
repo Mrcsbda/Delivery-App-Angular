@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Restaurant } from '../../../models/restaurant';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'restaurant-card',
@@ -9,4 +10,8 @@ import { Restaurant } from '../../../models/restaurant';
 export class RestaurantCardComponent {
   @Input()
   restaurantInfo!: Restaurant;
+
+  constructor() { }
+
+
 }

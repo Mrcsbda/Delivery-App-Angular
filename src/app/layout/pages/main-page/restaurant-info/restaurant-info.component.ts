@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Restaurant } from '../../../../models/restaurant';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap, take } from 'rxjs';
+import { RestaurantsService } from '../../../../services/restaurants.service';
 
 @Component({
   selector: 'restaurant-info',
@@ -41,6 +44,26 @@ export class RestaurantInfoComponent {
       price: 16
     },
   ]
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private restaurantsService: RestaurantsService) { }
+
+  ngOnInit(): void {
+
+    this.getRestaurantInfo()
+  }
+
+  private getRestaurantInfo() {
+    const restaurantId = this.activatedRoute.snapshot.paramMap.get('restaurantId');
+    this.restaurantsService.getRestaurantById(restaurantId as string)
+      .pipe(take(1))
+      .subscribe(restaurant => {
+        if (!restaurant) this.router.navigateByUrl('');
+        this.restaurantInfo = restaurant
+      })
+  }
 
   selectOption(option: string) {
     this.selectedOption = option;

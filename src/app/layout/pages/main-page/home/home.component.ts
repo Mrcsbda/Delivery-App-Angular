@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private screenSizeService: ScreenSizeService,
-    private RestaurantsService: RestaurantsService
+    private restaurantsService: RestaurantsService
   ) { }
 
   ngOnInit(): void {
@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
   }
 
   private getRestaurants() {
-    this.RestaurantsService.getRestaurants()
+    this.restaurantsService.getRestaurants()
       .pipe(take(1))
       .subscribe(restaurants => {
         this.restaurants = restaurants
