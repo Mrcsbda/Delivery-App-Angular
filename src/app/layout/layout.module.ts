@@ -21,6 +21,7 @@ import { OrderStatusComponent } from './pages/main-page/order-status/order-statu
 import { FinishedOrderComponent } from './components/finished-order/finished-order.component';
 import { CurrentOrderComponent } from './components/current-order/current-order.component';
 import { CartComponent } from './pages/main-page/cart/cart.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CartComponent } from './pages/main-page/cart/cart.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ]
 })
 export class LayoutModule { }

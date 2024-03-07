@@ -1,5 +1,5 @@
 <header-mobile *ngIf="isMobile"></header-mobile>
-<main class="home">
+<main class="home" *ngIf="restaurants; else loader">
   <section class="home__carrousel">
     <img
       *ngFor="let image of carrouselImages"
@@ -13,7 +13,9 @@
     <section
       *ngFor="let option of filterOptions"
       class="home__filter-option"
-      [ngClass]="{'home__filter-option--selected': option.value == selectedOption}"
+      [ngClass]="{
+        'home__filter-option--selected': option.value == selectedOption
+      }"
       (click)="selectOption(option.value)"
     >
       <img
@@ -27,6 +29,11 @@
   </article>
   <article class="home__restaurants">
     <restaurant-card
-    *ngFor="let restaurant of filteredRestaurants" [restaurantInfo]="restaurant" ></restaurant-card>
+      *ngFor="let restaurant of filteredRestaurants"
+      [restaurantInfo]="restaurant"
+    ></restaurant-card>
   </article>
 </main>
+<ng-template #loader>
+  <shared-loader></shared-loader>
+</ng-template>

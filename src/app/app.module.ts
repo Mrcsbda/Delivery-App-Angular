@@ -6,7 +6,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { LayoutModule } from './layout/layout.module';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { firebaseConfig } from '../environment.firebaseConfig'
+import { firebaseConfig } from '../environment.firebaseConfig';
+
 
 @NgModule({
   declarations: [

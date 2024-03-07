@@ -1,4 +1,4 @@
-<main class="restaurant" *ngIf="restaurantInfo">
+<main class="restaurant" *ngIf="restaurantInfo; else loader">
   <article class="restaurant__info-container">
     <img
       class="restaurant__arrow-prev-icon"
@@ -71,3 +71,6 @@
     <dish-info *ngFor="let dish of dishesInfo" [dish]="dish" [restaurantKey]="restaurantId"></dish-info>
   </article>
 </main>
+<ng-template #loader>
+  <shared-loader></shared-loader>
+</ng-template>

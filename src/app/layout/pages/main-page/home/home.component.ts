@@ -58,8 +58,8 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  restaurants: Restaurant[] = []
-  filteredRestaurants: Restaurant[] = []
+  restaurants!: Restaurant[];
+  filteredRestaurants!: Restaurant[];
 
   constructor(
     private screenSizeService: ScreenSizeService,

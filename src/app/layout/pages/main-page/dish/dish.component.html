@@ -1,4 +1,4 @@
-<main class="dish">
+<main class="dish" *ngIf="dish; else loader">
   <section class="dish__container">
     <article class="dish__info-container">
       <img
@@ -50,3 +50,6 @@
     </button>
   </section>
 </main>
+<ng-template #loader>
+  <shared-loader></shared-loader>
+</ng-template>
