@@ -68,6 +68,6 @@
     </section>
   </article>
   <article class="restaurant__dishes-container">
-    <dish-info *ngFor="let dish of dishesInfo" [dish]="dish"></dish-info>
+    <dish-info *ngFor="let dish of dishesInfo" [dish]="dish" [restaurantKey]="restaurantId"></dish-info>
   </article>
 </main>

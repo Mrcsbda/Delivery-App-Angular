@@ -1,16 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DishesService } from '../../../../services/dishes.service';
+import { take } from 'rxjs';
+import { Dish } from '../../../../models/dish';
 
 @Component({
   selector: 'app-dish',
   templateUrl: './dish.component.html',
   styleUrl: './dish.component.scss'
 })
-export class DishComponent {
-  dish = {
-    image: 'https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg',
-    name: 'Hot Dog',
-    adittions: ["French fries", "Coca Cola 750ml"],
-    description: "Our Quesudo Hot Dog is made with warm bread, baked Zenú sausage, melted cheese, our rich and fresh salad and potato chips."
+export class DishComponent implements OnInit {
+  restaurantId!: string;
+  dishId!: string;
+  dish!: Dish;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private dishesService: DishesService
+  ) {
+    this.restaurantId = this.activatedRoute.snapshot.paramMap.get('restaurantId') as string;
+    this.dishId = this.activatedRoute.snapshot.paramMap.get('dishId') as string;
+  }
+
+  ngOnInit(): void {
+    this.getDishInfo()
+  }
+
+  getDishInfo() {
+    this.dishesService.getDishById(this.restaurantId, this.dishId)
+    .pipe(take(1))
+    .subscribe(dish => {
+      if (!dish) this.router.navigateByUrl('');
+      this.dish = dish
+    })
   }
 
   goBack = () => {

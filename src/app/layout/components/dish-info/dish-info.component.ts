@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Dish } from '../../../models/dish';
 
 @Component({
   selector: 'dish-info',
@@ -7,11 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class DishInfoComponent {
-  @Input()
-  dish = {
-    image: "https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg",
-    name: "Hot Dog",
-    price: 13
-  }
-
+  @Input() dish!: Dish;
+  @Input() restaurantKey!: string;
 }
