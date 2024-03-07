@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
     return this.screenSizeService.isMobileView;
   }
 
-  selectOption(option: string) {
+  filterRestaurants(option: string) {
     this.selectedOption = option;
     if (option == "ALL") {
       this.filteredRestaurants = this.restaurants;

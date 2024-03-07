@@ -52,7 +52,7 @@
       [ngClass]="{
         'restaurant__filter-dish--selected': selectedOption === 'ALL'
       }"
-      (click)="selectOption('ALL')"
+      (click)="filterDishes('ALL')"
     >
       <p class="restaurant__filter-dish--text">All</p>
     </section>
@@ -62,13 +62,13 @@
       [ngClass]="{
         'restaurant__filter-dish--selected': option == selectedOption
       }"
-      (click)="selectOption(option)"
+      (click)="filterDishes(option)"
     >
       <p class="restaurant__filter-dish--text">{{ option | titlecase }}</p>
     </section>
   </article>
   <article class="restaurant__dishes-container">
-    <dish-info *ngFor="let dish of dishesInfo" [dish]="dish" [restaurantKey]="restaurantId"></dish-info>
+    <dish-info *ngFor="let dish of filteredDishes" [dish]="dish" [restaurantKey]="restaurantId"></dish-info>
   </article>
 </main>
 <ng-template #loader>

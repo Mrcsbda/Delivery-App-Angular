@@ -16,7 +16,7 @@
       [ngClass]="{
         'home__filter-option--selected': option.value == selectedOption
       }"
-      (click)="selectOption(option.value)"
+      (click)="filterRestaurants(option.value)"
     >
       <img
         *ngIf="option?.path"

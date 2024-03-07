@@ -37,6 +37,7 @@ export class RestaurantInfoComponent {
         if (!restaurant) this.router.navigateByUrl('');
         this.restaurantInfo = restaurant
         this.dishesInfo = dishes
+        this.filteredDishes = dishes
       })
   }
 
@@ -48,8 +49,13 @@ export class RestaurantInfoComponent {
     return this.dishesService.getDishesByRestaurantKey(this.restaurantId)
   }
 
-  selectOption(option: string) {
+  filterDishes(option: string) {
     this.selectedOption = option;
+    if (option == "ALL") {
+      this.filteredDishes = this.dishesInfo;
+    } else {
+      this.filteredDishes = this.dishesInfo.filter(dish => dish.categories.includes(option));
+    }
   }
 
   goBack = () => {
