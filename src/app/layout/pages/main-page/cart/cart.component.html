@@ -1,3 +1,74 @@
-<main>
-    <img src="" alt="">
+<main class="cart">
+  <img
+    class="cart__arrow-prev"
+    src="../../../../../assets/images/arrow-prev.svg"
+    alt="arrow prev"
+  />
+  <h1 class="cart__title">New Order</h1>
+  <section class="cart__address-container">
+    <h2 class="cart__subtitle">Deliver to</h2>
+    <article class="cart__address">
+      <div class="cart__location-container">
+        <img
+          class="cart__location-icon"
+          src="../../../../../assets/images/location.svg"
+          alt=""
+        />
+        <p>882 Well St, New-York</p>
+      </div>
+      <img
+        class="cart__arrow-next"
+        src="../../../../../assets/images/arrow-next.svg"
+        alt="arrow next"
+      />
+    </article>
+  </section>
+  <section class="cart__payments-container">
+    <h2 class="cart__subtitle">Payment</h2>
+    <article class="cart__payments">
+      <div class="cart__payment-method">Cash</div>
+      <div class="cart__payment-method" *ngFor="let i of [].constructor(3)">
+        <img
+          class="cart__payment-icon"
+          src="../../../../../assets/images/mastercard.svg"
+          alt=""
+        />
+        <p class="cart__payment-number">.... .... 4589</p>
+      </div>
+    </article>
+  </section>
+  <section class="cart__order-info-container">
+    <article class="cart__order" *ngFor="let i of [].constructor(2)">
+      <div class="cart__order-info">
+        <img
+          class="cart__order-image"
+          src="https://res.cloudinary.com/dd3qzm4in/image/upload/v1692829899/deliveryApp/los%20perritos/Perro-Caliente_lqlgzk.jpg"
+          alt="dish image"
+        />
+        <div class="cart__order-quantity">
+          <button class="cart__order-quantity-button">-</button>
+          <p>1</p>
+          <button class="cart__order-quantity-button">+</button>
+        </div>
+        <p class="cart__order-product">Fresh with funcheza</p>
+      </div>
+      <p class="cart__order-total-per-product">$ 32.00</p>
+    </article>
+  </section>
+  <section class="cart__total-products-container">
+    <article class="cart__total-products-info">
+      <p class="cart__total-text">Products</p>
+      <p class="cart__total-price">$ 60.45</p>
+    </article>
+    <article class="cart__total-products-info">
+      <p class="cart__total-text">Delivery</p>
+      <p class="cart__total-price">$ 60.45</p>
+    </article>
+    <hr class="cart__total-hr" />
+    <article class="cart__total-products-info">
+      <p class="cart__total-text">Total</p>
+      <p class="cart__total-price">$ 60.45</p>
+    </article>
+  </section>
+  <button class="cart__confirm-button">Confirm Order</button>
 </main>

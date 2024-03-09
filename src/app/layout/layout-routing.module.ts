@@ -18,7 +18,7 @@ const routes: Routes = [
     component: MainPageComponent,
     children: [
       {
-        path: '',
+        path: 'cart',
         component: HomeComponent
       },
       {
@@ -34,7 +34,7 @@ const routes: Routes = [
         component: UserProfileComponent
       },
       {
-        path: 'cart',
+        path: '',
         component: CartComponent
       },
       {
