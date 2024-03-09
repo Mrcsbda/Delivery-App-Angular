@@ -22,6 +22,8 @@ import { FinishedOrderComponent } from './components/finished-order/finished-ord
 import { CurrentOrderComponent } from './components/current-order/current-order.component';
 import { CartComponent } from './pages/main-page/cart/cart.component';
 import { SharedModule } from '../shared/shared.module';
+import { EditUserProfileComponent } from './pages/main-page/edit-user-profile/edit-user-profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { SharedModule } from '../shared/shared.module';
     FinishedOrderComponent,
     CurrentOrderComponent,
     CartComponent,
+    EditUserProfileComponent,
   ],
   exports: [
     MainPageComponent,
@@ -52,7 +55,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     LayoutRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class LayoutModule { }

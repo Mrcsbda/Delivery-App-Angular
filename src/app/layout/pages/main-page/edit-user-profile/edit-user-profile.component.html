@@ -1,0 +1,95 @@
+<main class="edit-user-profile">
+  <img
+    class="edit-user-profile__arrow-prev"
+    src="../../../../assets/images/arrow-prev.svg"
+    alt=""
+  />
+  <h1 class="edit-user-profile__title">Profile</h1>
+  <figure class="edit-user-profile__profile-picture-container">
+    <img
+      class="edit-user-profile__profile-picture"
+      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt=""
+    /><img
+      class="edit-user-profile__edit-picture-icon"
+      src="../../../../../assets/images/camera.svg"
+      alt="edit picture icon"
+      (click)="isEditingProfilePicture = !isEditingProfilePicture"
+    />
+  </figure>
+  <form
+    class="edit-user-profile__form-update-image"
+    *ngIf="isEditingProfilePicture"
+  >
+    <input type="file" class="edit-user-profile__input-file" />
+    <button type="submit" class="edit-user-profile__update-image-btn">
+      Update image
+    </button>
+  </form>
+  <form class="edit-user-profile__form-update-info">
+    <div class="edit-user-profile__input-container">
+      <input
+        type="text"
+        class="edit-user-profile__input"
+        value="Mariana Castañeda Bedoya"
+      />
+      <img
+        class="edit-user-profile__edit-icon"
+        src="../../../../../assets/images/edit.svg"
+        alt="edit icon"
+      />
+    </div>
+    <div class="edit-user-profile__input-container">
+      <input
+        type="email"
+        class="edit-user-profile__input"
+        value="mariana.c.bedoya.8@gmail.com"
+      />
+      <img
+        class="edit-user-profile__edit-icon"
+        src="../../../../../assets/images/edit.svg"
+        alt="edit icon"
+      />
+    </div>
+    <div class="edit-user-profile__input-container">
+      <input
+        type="number"
+        class="edit-user-profile__input"
+        value="12345678"
+        placeholder="Please enter a number"
+      />
+      <img
+        class="edit-user-profile__edit-icon"
+        src="../../../../../assets/images/edit.svg"
+        alt="edit icon"
+      />
+    </div>
+    <div class="edit-user-profile__input-container">
+      <input
+        type="date"
+        class="edit-user-profile__input"
+        value="1990-01-01"
+        placeholder="Please enter your birth date"
+      />
+      <img
+        class="edit-user-profile__edit-icon"
+        src="../../../../../assets/images/edit.svg"
+        alt="edit icon"
+      />
+    </div>
+    <div class="edit-user-profile__input-container">
+      <input
+        type="text"
+        class="edit-user-profile__input"
+        value="Carrera 28#40a 9"
+        placeholder="Please enter your address"
+      />
+      <img
+        class="edit-user-profile__edit-icon"
+        src="../../../../../assets/images/edit.svg"
+        alt="edit icon"
+      />
+    </div>
+    <button type="submit" class="edit-user-profile__btn-save">Save</button>
+  </form>
+</main>

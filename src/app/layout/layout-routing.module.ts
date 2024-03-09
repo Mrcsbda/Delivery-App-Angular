@@ -10,6 +10,7 @@ import { RestaurantInfoComponent } from './pages/main-page/restaurant-info/resta
 import { DishComponent } from './pages/main-page/dish/dish.component';
 import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
 import { CartComponent } from './pages/main-page/cart/cart.component';
+import { EditUserProfileComponent } from './pages/main-page/edit-user-profile/edit-user-profile.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
     component: MainPageComponent,
     children: [
       {
-        path: 'cart',
+        path: 'profile/edit',
         component: HomeComponent
       },
       {
@@ -34,7 +35,7 @@ const routes: Routes = [
         component: UserProfileComponent
       },
       {
-        path: '',
+        path: 'cart',
         component: CartComponent
       },
       {
@@ -52,6 +53,14 @@ const routes: Routes = [
       {
         path: 'orders/:orderId',
         component: OrderStatusComponent
+      },
+      {
+        path: '',
+        component: EditUserProfileComponent
+      },
+      {
+        path: '**',
+        redirectTo: ''
       }
     ]
   }
