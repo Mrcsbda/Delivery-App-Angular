@@ -11,6 +11,7 @@ import { DishComponent } from './pages/main-page/dish/dish.component';
 import { OrderStatusComponent } from './pages/main-page/order-status/order-status.component';
 import { CartComponent } from './pages/main-page/cart/cart.component';
 import { EditUserProfileComponent } from './pages/main-page/edit-user-profile/edit-user-profile.component';
+import { AddNewCardComponent } from './pages/main-page/add-new-card/add-new-card.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,10 @@ const routes: Routes = [
       {
         path: 'profile/edit',
         component: EditUserProfileComponent
+      },
+      {
+        path: 'payment-methods/add-new-card',
+        component: AddNewCardComponent
       },
       {
         path: '**',

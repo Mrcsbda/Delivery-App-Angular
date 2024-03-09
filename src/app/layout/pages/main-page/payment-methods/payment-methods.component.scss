@@ -5,6 +5,14 @@
     padding: 1.5rem 1.2rem;
     flex-direction: column;
 
+    &__arrow-prev {
+        width: 1.4rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.45rem;
+        left: 1rem;
+    }
+
     &__title {
         font-size: 18px;
         font-weight: 300;
@@ -75,6 +83,10 @@
 @media screen and (min-width: 650px) {
     .payment-methods {
         padding: 0rem 1.2rem;
+
+        &__arrow-prev {
+            display: none;
+        }
 
         &__container {
             width: 100%;

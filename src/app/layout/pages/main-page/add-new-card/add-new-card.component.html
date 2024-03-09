@@ -1,0 +1,18 @@
+<main class="add-new-card">
+  <img
+    class="add-new-card__arrow-prev"
+    src="../../../../../assets/images/arrow-prev.svg"
+    alt="arrow icon"
+    (click)="goBack()"
+  />
+  <h1 class="add-new-card__title">Add new card</h1>
+  <form class="add-new-card__form">
+    <input type="text" class="add-new-card__input" placeholder="Card name">
+    <input type="text" class="add-new-card__input" placeholder="Card number">
+    <div class="add-new-card__input-container">
+      <input type="text" class="add-new-card__input" placeholder="MM/YY">
+      <input type="text" class="add-new-card__input" placeholder="CVV">
+    </div>
+    <button type="submit" class="add-new-card__submit-btn">Save</button>
+  </form>
+</main>

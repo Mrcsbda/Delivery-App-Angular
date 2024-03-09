@@ -5,7 +5,7 @@ import { take } from 'rxjs';
 import { Dish } from '../../../../models/dish';
 
 @Component({
-  selector: 'app-dish',
+  selector: 'dish',
   templateUrl: './dish.component.html',
   styleUrl: './dish.component.scss'
 })

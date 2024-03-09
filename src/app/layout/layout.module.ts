@@ -24,6 +24,7 @@ import { CartComponent } from './pages/main-page/cart/cart.component';
 import { SharedModule } from '../shared/shared.module';
 import { EditUserProfileComponent } from './pages/main-page/edit-user-profile/edit-user-profile.component';
 import { FormsModule } from '@angular/forms';
+import { AddNewCardComponent } from './pages/main-page/add-new-card/add-new-card.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     CurrentOrderComponent,
     CartComponent,
     EditUserProfileComponent,
+    AddNewCardComponent,
   ],
   exports: [
     MainPageComponent,

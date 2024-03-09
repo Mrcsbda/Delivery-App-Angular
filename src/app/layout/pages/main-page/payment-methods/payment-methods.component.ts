@@ -19,4 +19,8 @@ export class PaymentMethodsComponent {
     number: 1234,
   }
   ]
+
+  goBack() {
+    window.history.back();
+  }
 }
