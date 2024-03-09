@@ -10,6 +10,7 @@ export class UserProfileComponent {
     {
       icon: "../../../../assets/images/account-edit.svg",
       title: "Account edit",
+      path: "/profile/edit"
     },
     {
       icon: "../../../../assets/images/payment-methods.svg",

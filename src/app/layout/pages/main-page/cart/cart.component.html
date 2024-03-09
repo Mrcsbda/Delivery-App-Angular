@@ -3,6 +3,7 @@
     class="cart__arrow-prev"
     src="../../../../../assets/images/arrow-prev.svg"
     alt="arrow prev"
+    (click)="goBack()"
   />
   <h1 class="cart__title">New Order</h1>
   <section class="cart__address-container">
@@ -20,6 +21,7 @@
         class="cart__arrow-next"
         src="../../../../../assets/images/arrow-next.svg"
         alt="arrow next"
+        routerLink="/profile/edit"
       />
     </article>
   </section>

@@ -17,8 +17,8 @@
     }
 
     &__picture {
-        width: 7.5rem;
-        height: 7.5rem;
+        width: 7rem;
+        height: 7rem;
         object-fit: cover;
         border-radius: 50%;
     }
@@ -79,10 +79,6 @@
 
 @media screen and (min-width: 1500px) {
     .user-profile {
-        &__picture {
-            width: 8rem;
-            height: 8rem;
-        }
 
         &__user-name {
             font-size: 18px;

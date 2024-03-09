@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class EditUserProfileComponent {
   isEditingProfilePicture: boolean = false;
+
+  goBack = () => {
+    window.history.back()
+  }
 }

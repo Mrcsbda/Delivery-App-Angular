@@ -19,7 +19,7 @@ const routes: Routes = [
     component: MainPageComponent,
     children: [
       {
-        path: 'profile/edit',
+        path: '',
         component: HomeComponent
       },
       {
@@ -55,7 +55,7 @@ const routes: Routes = [
         component: OrderStatusComponent
       },
       {
-        path: '',
+        path: 'profile/edit',
         component: EditUserProfileComponent
       },
       {
